@@ -25,7 +25,7 @@ contracts = { workspace = true }
 # `default-features = false` drops every other driver and the connector
 # HTTP stack so the binary stays at the sudowork target size.
 kernel = { workspace = true }
-backends = { workspace = true, default-features = false, features = ["driver-path-local", "driver-remote"] }
+backends = { workspace = true, default-features = false, features = ["driver-path-local", "driver-remote", "driver-s3"] }
 # VFS gRPC server (port 2028) + auth provider (NoAuth — mTLS is the
 # cluster-internal authentication boundary). Cluster binary never pulls
 # the services post-syscall-hooks tier — keep the dep set minimal.
